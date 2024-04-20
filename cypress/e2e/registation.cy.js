@@ -1,5 +1,6 @@
 import { baseUrl } from "../../data/urls";
 import * as reg from "../../tests/registerFn";
+import { firstName } from "../../data/testData";
 
 
 describe('Registration', () => {
@@ -11,6 +12,6 @@ describe('Registration', () => {
         // checking that you are on the right page
         cy.url().should('eq', 'https://demo.zveno.io/reg');
 
-        
+
     })
 })
