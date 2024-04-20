@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Mamchuk1/testTask/issues"
   },
-  "homepage": "https://github.com/Mamchuk1/testTask#readme"
+  "homepage": "https://github.com/Mamchuk1/testTask#readme",
+  "devDependencies": {
+    "cypress": "^13.8.0"
+  }
 }
