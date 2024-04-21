@@ -11,7 +11,6 @@
 2. Cypress:
    ```bash
    npm install cypress --save-dev
-3. ```bash
    npm install --save-dev cypress-file-upload
 
 ## Launch test
