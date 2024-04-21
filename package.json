@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Mamchuk1/testTask#readme",
   "devDependencies": {
-    "cypress": "^13.8.0"
+    "cypress": "^13.8.0",
+    "cypress-file-upload": "^5.0.8"
   }
 }

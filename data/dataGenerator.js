@@ -21,3 +21,4 @@ export function generatePhoneNumber(length) {
 export function generateCompanyName(length) {
     return generateName(length)
 }
+
