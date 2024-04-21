@@ -1,6 +1,6 @@
 import { baseUrl } from "../../data/urls";
 import * as reg from "../../tests/registerFn";
-import { firstName } from "../../data/testData";
+import { firstName, secondName, email, password, phoneNumber, fullCompany, shortCompany } from "../../data/testData";
 
 
 describe('Registration', () => {
@@ -12,6 +12,19 @@ describe('Registration', () => {
         // checking that you are on the right page
         cy.url().should('eq', 'https://demo.zveno.io/reg');
 
+        reg.fillPersonalData(firstName, secondName, email, password, phoneNumber);
+
+        // move to registration step 2
+        cy.get('#app > div > div.login-overlay > div.login-card > div > div.login-form-container > div._input-group._input-group__buttons-row > button').should('not.have.attr', 'disabled');
+        cy.get('#app > div > div.login-overlay > div.login-card > div > div.login-form-container > div._input-group._input-group__buttons-row > button > span').click();
+
+        // select country
+        cy.get('#app > div.v-application--wrap > div.login-overlay > div.login-card > div > div.login-form-container > div.v-stepper.no-border.no-shadow.v-stepper--is-booted.theme--dark > div > div:nth-child(2) > div > form > div:nth-child(2) > div > div.v-input.v-input--hide-details.v-input--is-label-active.v-input--is-dirty.v-input--dense.theme--dark.v-text-field.v-text-field--solo-flat.v-text-field--is-booted.v-text-field--enclosed.v-text-field--outlined.v-select > div > div > div.v-select__slot > div.v-select__selections').click();
+        cy.get('#list-item-130-1 > div > div').should('have.text', 'Казахстан').click();
+
+        // fill company names(full, short)
+        cy.get('#input-83').type(fullCompany);
+        cy.get('#input-86').type(shortCompany);
 
     })
 })
