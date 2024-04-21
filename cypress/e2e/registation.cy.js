@@ -40,6 +40,18 @@ describe('Registration', () => {
         cy.get('#input-167').type(iin);
         cy.get('#input-170').type(okpo);
 
+        // upload id image
+        cy.get('#input-172').attachFile('../../img/test.jpg');
 
+        // checkbox
+        cy.get('#input-179').click();
+
+        // finish the registration
+        cy.get('#app > div.v-application--wrap > div.login-overlay > div.login-card > div > div.login-form-container > div._input-group._input-group__buttons-row > button').should('not.have.attr', 'disabled');
+        cy.get('#app > div.v-application--wrap > div.login-overlay > div.login-card > div > div.login-form-container > div._input-group._input-group__buttons-row > button > span').click();
+
+        // check and close modal
+        cy.get('#app > div.v-dialog__content.v-dialog__content--active > div > div').should('be.visible');
+        cy.get('#app > div.v-dialog__content.v-dialog__content--active > div > div > div._modal-actions > button > span').click();
     })
 })
