@@ -1,0 +1,35 @@
+{
+  "name": "testtask-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register src/**/*.spec.ts --timeout 60000",
+    "build": "tsc -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mamchuk1/testTask.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mamchuk1/testTask/issues"
+  },
+  "homepage": "https://github.com/Mamchuk1/testTask#readme",
+  "description": "",
+  "dependencies": {
+    "chai": "^6.2.1",
+    "selenium-webdriver": "^4.38.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.10.1",
+    "@types/selenium-webdriver": "^4.35.3",
+    "chromedriver": "^142.0.2",
+    "mocha": "^11.7.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
